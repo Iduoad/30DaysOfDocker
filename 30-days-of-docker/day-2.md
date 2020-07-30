@@ -29,7 +29,7 @@
     </ul>
     <p align="center">
         <a href="https://docs.docker.com/engine/reference/commandline/ps/#formatting">
-            <img alt="--format" src="images/formatting-(--format).png"/>
+            <img alt="--format" src="images/docker-ps-formatting.png"/>
         </a>
     </p>   
 </div>
