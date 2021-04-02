@@ -16,7 +16,7 @@
     # Here we'll only get one process (ps). 
     exec ps > processes.txt
 
-<div dir="ltr">
+<div dir="rtl">
     <ul>
     هاذ اللعيبة (exec) لي هي shell wrapper over exec syscalls تاتفعنى منين تانخدمو Shell form في ENTRYPOINT أو CMD و تاتخلينا نبدلة process ديال الshell بالprocess ديال الprogram ديالنا و نتهناو من ديك الوصاية ديال shell لي هضرنا عليها في البوسط لي فات.
     <li>
