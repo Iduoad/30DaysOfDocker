@@ -8,12 +8,12 @@
     <li>موما منين تايعيطو على شي program وسط الshell script ديالنا أو منين تانخدموا أي program في Linux .. تايطرى واحد البلان سميتو fork يعني أن kernel تايدير نسخة من process اﻷب (لي هو shell في الحالة ديالنا) و من بعد تايدير exec لي تاتشد الprogram ديالنا و تاتخشيه في هاديك النسخة الجديدة ديال الأب ..<br>
     طريقة أخرى باش نصايبو process جديد هي نحرقو المراحل و مانعيطوش على fork و ندوزو نيشان من exec ..يعني أننا غادي نشدو program ديالنا و غادي نخشيوه وسط الأب براسو.<br>
     أبسط مثال على هاذشي هو ps:<br>
-    ```
+    <code>
     # here we'll get two processes the parent(shell) and child (ps)
     ps > processes.txt
     # Here we'll only get one process (ps). 
     exec ps > processes.txt
-    ```
+    </code>
     هاذ اللعيبة (exec) لي هي shell wrapper over exec syscalls تاتفعنى منين تانخدمو Shell form في ENTRYPOINT أو CMD و تاتخلينا نبدلة process ديال الshell بالprocess ديال الprogram ديالنا و نتهناو من ديك الوصاية ديال shell لي هضرنا عليها في البوسط لي فات.
     </li>
     <li>
