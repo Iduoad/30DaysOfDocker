@@ -16,3 +16,18 @@
 في Docker عندنا By default كل container تايجي بواحد الLinux capabilities و ممكن نزيدوا ليه شي واحدين و ننقصوا لي آخرين باستعمال cap-add و cap-drop
 
 </div>
+
+```bash
+• • • 
+# Prevent container from setting capabilities of processes and from writing to the kernel audit logs 
+docker run --cap-drop=setfcap --cap-drop=audit_write devC:latest 
+
+# Drop all capabilities besides setuid and setgid 
+docker run --cap-drop=all --cap-add=setuid --cap-add=setgid devC:latest 
+
+# Prevent container from binding to privileged ports (< 1024 inside its namespace) 
+docker run --cap-drop=net_bind_service devC:latest 
+
+# Give the container SYS_ADMIN capabilities (equivalent to root) 
+docker run --cap-add=CAP_SYS_ADMIN devC:latest  
+```

@@ -8,4 +8,33 @@
 
 كيفاش ممكن نهضروا مع هاذشي كامل بسهولة ؟
 هنا فين تايجي الدور ديال Docker contexts .. ممكن تصايبوا context لكل واحد من هاذز لي هدرنا عليهم و نبقاو نسويتشيو بيناتهم بسهولة.
+
+```bash
+# Create docker contexts 
+docker context create --docker host=unix:///var/run/docker.sock mine 
+docker context create --docker host=tcp://devc.local:10000 devc-local 
+docker context create --docker host=ssh://devcuser@devc.com devc-com
+
+# List all contexts 
+docker context list 
+
+# Switch to our local one
+docker context use mine 
+## Execute commands against my docker daemon
+docker ps 
+docker run devc:latest 
+
+# Switch to DevC local context
+docker context use devc-local 
+## Execute commands in DevC local daemon via TCP 
+docker ps 
+docker run devc:latest 
+
+# Switch to devc-com context
+docker context use devc-com 
+## Execute commands in the devc-com host via ssh. 
+docker ps docker 
+run devc:latest 
+```
+
 </div>
