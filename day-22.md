@@ -80,3 +80,5 @@ http://www.linusakesson.net/programming/tty/index.php
 </ul>
 
 </div>
+
+![Terminal](images/terminal.jpg)

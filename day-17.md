@@ -43,3 +43,5 @@
     <li>الStorage Drivers هوما واجهة لل Filesystems لي تايوفروا هاذوك الخاصيات بحال COW و Layering .. الFS الأكثر استعمالا هو OverlayFS 2 </li>
     </ul>
 </div>
+
+![Layers](images/layers.jpg)
