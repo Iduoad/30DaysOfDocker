@@ -3,7 +3,8 @@
 <div dir="rtl">
 اليوم غادي نكملوا الهضرة على Dockerfiles و هاذ المرة غادي نهضروا على package managers و كيفاش نستعملوهم بطريقة مزيانة في Dockerfiles <br>
 
-كيفما قلنا قبل في اليوم 17 docker تايخبي Images على شكل immutable layers و أننا مخاصناش نكثروا الlayers باش نتفاداو نزيدوا الحجم ديال Images ديالنا.
+كيفما قلنا قبل في اليوم 17 docker تايخبي Images على شكل immutable layers و أننا مخاصناش نكثروا الlayers باش نتفاداو نزيدوا الحجم ديال Images ديالنا.<br>
+
 حاجة آخرى هي خاصنا نحاولوا ما أمكن نحديوا Temporary Files بحال Build tools في layer في زدناهم، حيت كيفما قلنا قبل ايلا مشاو تابقاو ماغاديش يمكن نمسحوهم في شي Layer من بعد.
 </div>
 
@@ -49,11 +50,14 @@
 نحيدوا package list و package cache في نفس الlayer
 باش نديروا هاذشي في debian
 
-RUN apt-get update && apt-get install -y --no-install-recommends php7.3 && rm -rf /var/lib/apt/lists/* && apt-get clean
+    RUN apt-get update && apt-get install -y --no-install-recommends php7.3 && rm -rf /var/lib/apt/lists/* && apt-get clean
+
 في أغلب الofficial base images ديال debian و ubuntu ال apt-get clean تاتدار أوتوكاتيطيا
 باش نديروا هاذشي في redhat-based distros
-
-    RUN yum -y php && rm -rf /var/cache/yum
 </div>
 
+    RUN yum -y php && rm -rf /var/cache/yum
+
+<div dir="rtl">
 في البوسط الجاي غادي نهضروا على كيفاش ننقصوا من size ديال image أكثر في Debian 
+</div>
