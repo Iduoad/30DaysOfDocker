@@ -13,7 +13,7 @@
     COPY ./devC /app 
 
 <div dir="rtl"><ul>
-    <li>    أما ADD فهي شوية ذكية، بحيث أنها تاتقدر تعرف النوع ديال source و تتعامل معاه على حساب .. ADD تاتقجر تكوبيي ملفات عادي بحال COPY زائد URLs أو Archive ليتدير ليهم extract أوتوماتيكيا.</li>
+    <li>    أما ADD فهي شوية ذكية، بحيث أنها تاتقدر تعرف النوع ديال source و تتعامل معاه على حساب .. ADD تاتقدر تكوبيي ملفات عادي بحال COPY زائد URLs أو Archive ليتدير ليهم extract أوتوماتيكيا.</li>
 </ul></div>
 
     # the archive will be extracted into /app
